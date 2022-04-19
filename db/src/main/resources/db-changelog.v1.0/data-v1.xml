@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+    <changeSet id="1" author="Sergey Orudzhev">
+        <insert tableName="usr">
+            <column name="id" value="1"/>
+            <column name="first_name" value="John"/>
+            <column name="last_name" value="Doe"/>
+        </insert>
+
+        <insert tableName="address">
+            <column name="id" value="1"/>
+            <column name="usr_id" value="1"/>
+            <column name="country" value="Russia"/>
+            <column name="city" value="Moscow"/>
+            <column name="address" value="123321321"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

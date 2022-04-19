@@ -1,0 +1,25 @@
+GET localhost:8080/api/v1/address/1
+
+###
+
+POST localhost:8080/api/v1/address
+Content-Type: application/json
+
+{
+"country": "Russia",
+"city": "Moscow",
+"address": "123321"
+}
+
+###
+
+PUT localhost:8080/api/v1/address
+Content-Type: application/json
+
+{
+  "id": 2,
+  "userId": 1,
+  "country": "Russia2",
+  "city": "Moscow2",
+  "address": "1233212141"
+}
