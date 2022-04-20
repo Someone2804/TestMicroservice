@@ -23,8 +23,7 @@ Content-Type: application/json
 {
   "id": ["1", "3", "4", "5"],
   "firstName": "",
-  "lastName": "Ran",
-  "country": "Russia"
+  "lastName": "Ran"
 }
 
 ###

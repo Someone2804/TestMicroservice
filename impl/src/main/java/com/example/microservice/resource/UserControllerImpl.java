@@ -27,6 +27,7 @@ public class UserControllerImpl implements UserController {
     private final UserService userService;
 
     private final KafkaTemplate<Long, UserDto> template;
+    private final KafkaTemplate<Long, List<UserDto>> templateForList;
 
     @Override
     @GetMapping("/{id}")
@@ -36,8 +37,8 @@ public class UserControllerImpl implements UserController {
 
     @Override
     @PostMapping("/search")
-    public ResponseEntity<List<UserDto>> getAll(@RequestBody UserSearch userSearch) {
-        return ResponseEntity.ok(userService.getAll(userSearch));
+    public void getAll(@RequestBody UserSearch userSearch) {
+        templateForList.send("userList", userService.getAll(userSearch));
     }
 
     @Override
